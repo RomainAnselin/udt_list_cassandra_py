@@ -38,12 +38,16 @@ These scripts were tested on the following configuration
 ### Object Mapper sample
 ```cqlsh> select * from romaindc1.omhistories ;
 
- id | om_approval  | om_history
-----+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- 10 | approval v10 | [{approver: 'approver11@example.com', approval_status: 'pending', approval_handled_at: '2025-03-11 13:20:23.866000+0000', approval_note: 'Initial review pending'}, {approver: 'approver11@example.com', approval_status: 'completed', approval_handled_at: '2025-03-11 13:20:24.278000+0000', approval_note: 'Review completed'}]
- 11 | approval v11 | [{approver: 'approver12@example.com', approval_status: 'pending', approval_handled_at: '2025-03-11 13:20:24.993000+0000', approval_note: 'Initial review pending'}, {approver: 'approver12@example.com', approval_status: 'completed', approval_handled_at: '2025-03-11 13:20:25.370000+0000', approval_note: 'Review completed'}]
-  8 |  approval v8 |                                                                                                                                                                 [{approver: 'approver9@example.com', approval_status: 'pending', approval_handled_at: '2025-03-11 13:20:22.538000+0000', approval_note: 'Initial review pending'}]
-  7 |  approval v7 |                                                                                                                                                                 [{approver: 'approver8@example.com', approval_status: 'pending', approval_handled_at: '2025-03-11 13:20:21.924000+0000', approval_note: 'Initial review pending'}]
-  6 |  approval v6 |                                                                                                                                                                 [{approver: 'approver7@example.com', approval_status: 'pending', approval_handled_at: '2025-03-11 13:20:20.707000+0000', approval_note: 'Initial review pending'}]
-  9 |  approval v9 | [{approver: 'approver10@example.com', approval_status: 'pending', approval_handled_at: '2025-03-11 13:20:22.947000+0000', approval_note: 'Initial review pending'}, {approver: 'approver10@example.com', approval_status: 'completed', approval_handled_at: '2025-03-11 13:20:23.357000+0000', approval_note: 'Review completed'}]
+
+@ Row 1
+-------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ id          | 10
+ om_approval | approval v10
+ om_history  | [{approver: 'approver11@example.com', approval_status: 'pending', approval_handled_at: '2025-03-11 13:20:23.866000+0000', approval_note: 'Initial review pending'}, {approver: 'approver11@example.com', approval_status: 'completed', approval_handled_at: '2025-03-11 13:20:24.278000+0000', approval_note: 'Review completed'}]
+
+@ Row 3
+-------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ id          | 8
+ om_approval | approval v8
+ om_history  | [{approver: 'approver9@example.com', approval_status: 'pending', approval_handled_at: '2025-03-11 13:20:22.538000+0000', approval_note: 'Initial review pending'}]
 ```
